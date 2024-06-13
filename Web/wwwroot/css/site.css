@@ -220,3 +220,21 @@ html, body {
 .popular-searches {
     margin-top: 20px;
 }
+
+.dropdown-menu {
+    background-color: #f8f9fa; /* Açýk gri arka plan rengi */
+}
+
+.dropdown-header {
+    font-weight: bold;
+    color: #4CAF50; /* Ana renk */
+}
+
+.dropdown-item {
+    color: #333; /* Metin rengi */
+}
+
+    .dropdown-item:hover {
+        background-color: #4CAF50; /* Hover arka plan rengi */
+        color: white; /* Hover metin rengi */
+    }

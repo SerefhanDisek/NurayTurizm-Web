@@ -1,0 +1,32 @@
+﻿@model Web.Models.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Profilim";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="card-title">Profilim</h4>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">Adınız</dt>
+                        <dd class="col-sm-8">@Model.FirstName</dd>
+
+                        <dt class="col-sm-4">Soyadınız</dt>
+                        <dd class="col-sm-8">@Model.LastName</dd>
+
+                        <dt class="col-sm-4">E-mail</dt>
+                        <dd class="col-sm-8">@Model.Email</dd>
+
+                        <dt class="col-sm-4">Telefon Numarası</dt>
+                        <dd class="col-sm-8">@Model.PhoneNumber</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,10 @@ namespace DataAccess.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool TermsAccepted { get; set; }
+        public bool CommercialEmailsAccepted { get; set; }
         public ICollection<Rezervasyon> Rezervasyonlar { get; set; }  
         public ICollection<Yorum> Yorumlar { get; set; }
     }

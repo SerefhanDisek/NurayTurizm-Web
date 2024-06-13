@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="/">
-                <img src="~/img/NT.png" alt="Nuray Turizm" style="height: 60px;" />
+                <img src="~/img/NT.png" alt="Nuray Turizm" class="logo" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,12 +41,26 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">KAYIT OL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">GİRİŞ YAP</a>
-                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Account/Profile">@User.Identity.Name</a>
+                        </li>
+                        <li class="nav-item">
+                            <form method="post" asp-controller="Account" asp-action="Logout" class="form-inline">
+                                <button type="submit" class="btn btn-link nav-link" style="cursor:pointer;">Çıkış Yap</button>
+                            </form>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Account/Register">KAYIT OL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Account/Login">GİRİŞ YAP</a>
+                        </li>
+                    }
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             TR
@@ -74,4 +88,3 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-

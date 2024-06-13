@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-success">
+            <!-- Burada yeşil alt çizgiyi ekledik -->
             <a class="navbar-brand" href="/">
                 <img src="~/img/NT.png" alt="Nuray Turizm" class="logo" />
             </a>
@@ -24,8 +25,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/gezi-rehberi">İNTERAKTİF GEZİ REHBERİ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/turlar">TURLAR</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="turlarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            TURLAR
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="turlarDropdown">
+                            <h6 class="dropdown-header">YURT İÇİ TURLARI</h6>
+                            <a class="dropdown-item" href="#">ULUDAĞ TURLARI</a>
+                            <a class="dropdown-item" href="#">KARADENİZ TURLARI</a>
+                            <a class="dropdown-item" href="#">PAMUKKALE TURLARI</a>
+                            <a class="dropdown-item" href="#">KAPLICA TURLARI</a>
+                            <a class="dropdown-item" href="#">GAP TURLARI</a>
+                            <a class="dropdown-item" href="#">GÜNÜBİRLİK TURLAR</a>
+                            <a class="dropdown-item" href="#">EGE-AKDENİZ TURLARI</a>
+                            <a class="dropdown-item" href="#">İSTANBUL TURLARI</a>
+                            <a class="dropdown-item" href="#">KAPADOKYA TURLARI</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">YURT DIŞI TURLARI</h6>
+                            <a class="dropdown-item" href="#">BALKAN TURLARI</a>
+                            <a class="dropdown-item" href="#">UMRE ORGANİZASYONLARI</a>
+                            <a class="dropdown-item" href="#">İTALYA TURLARI</a>
+                            <a class="dropdown-item" href="#">EGE ADALARI TURLARI</a>
+                            <a class="dropdown-item" href="#">BATUM - GÜRCİSTAN TURLARI</a>
+                            <a class="dropdown-item" href="#">AZERBAYCAN TURLARI</a>
+                            <a class="dropdown-item" href="#">DUBAI TURLARI</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/seyahat-ipuclari">SEYAHAT İPUÇLARI</a>
@@ -88,3 +112,4 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+

@@ -1,0 +1,40 @@
+﻿@model DataAccess.Models.Tur
+
+@{
+    ViewData["Title"] = "Tur Sil";
+}
+
+<h2>Tur Sil</h2>
+
+<h3>Silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Tur</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Açıklama)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Açıklama)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AktifMi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AktifMi)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+    </form>
+</div>
+

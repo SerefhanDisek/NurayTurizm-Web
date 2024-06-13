@@ -1,12 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using DataAccess.Models;
-using System.Collections.Generic;
-using System.Reflection.Emit;
 
 namespace DataAccess
 {
-    public class TurContext : DbContext
+    public class TurContext : IdentityDbContext<ApplicationUser>
     {
+        public TurContext(DbContextOptions<TurContext> options) : base(options) { }
+
         public DbSet<Tur> Turlar { get; set; }
         public DbSet<Adres> Adresler { get; set; }
         public DbSet<Ulke> Ulkeler { get; set; }
@@ -19,15 +20,13 @@ namespace DataAccess
         public DbSet<Fatura> Faturalar { get; set; }
         public DbSet<Tahsilat> Tahsilatlar { get; set; }
         public DbSet<TahsilatTuru> TahsilatTurleri { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-N1QFE9C\\SQLEXPRESS;Database=TurContext;Trusted_Connection=True;TrustServerCertificate=True;");
-        }
+        public DbSet<Rezervasyon> Rezervasyonlar { get; set; }
+        public DbSet<Yorum> Yorumlar { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // İlişkileri tanımlama
+            base.OnModelCreating(modelBuilder); // Identity tablolarını oluşturmak için
+
             modelBuilder.Entity<Adres>()
                 .HasOne(a => a.Tur)
                 .WithMany(t => t.Adresler)
@@ -58,7 +57,25 @@ namespace DataAccess
                 .WithMany(tt => tt.Tahsilatlar)
                 .HasForeignKey(t => t.TahsilatTuruID);
 
-            // Diğer ilişkileri benzer şekilde tanımlayın...
+            modelBuilder.Entity<Rezervasyon>()
+                .HasOne(r => r.Tur)
+                .WithMany(t => t.Rezervasyonlar)
+                .HasForeignKey(r => r.TurID);
+
+            modelBuilder.Entity<Rezervasyon>()
+                .HasOne(r => r.User)
+                .WithMany(u => u.Rezervasyonlar)
+                .HasForeignKey(r => r.UserID);
+
+            modelBuilder.Entity<Yorum>()
+                .HasOne(y => y.Tur)
+                .WithMany(t => t.Yorumlar)
+                .HasForeignKey(y => y.TurID);
+
+            modelBuilder.Entity<Yorum>()
+                .HasOne(y => y.User)
+                .WithMany(u => u.Yorumlar)
+                .HasForeignKey(y => y.UserID);
         }
     }
 }

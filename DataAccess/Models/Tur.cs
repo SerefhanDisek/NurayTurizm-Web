@@ -18,5 +18,7 @@ namespace DataAccess.Models
         public ICollection<GeziProgramı> GeziProgramları { get; set; }
         public ICollection<Adres> Adresler { get; set; }
         public ICollection<TuraKayit> TuraKayitlar { get; set; }
+        public ICollection<Rezervasyon> Rezervasyonlar { get; set; }  
+        public ICollection<Yorum> Yorumlar { get; set; }
     }
 }

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DataAccess.Models.Tur>
+
+@{
+    ViewData["Title"] = "Turlar";
+}
+
+<h2>Turlar</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Yeni Tur Ekle</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Açıklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AktifMi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Açıklama)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AktifMi)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Düzenle</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-info">Detaylar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

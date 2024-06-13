@@ -24,7 +24,28 @@ namespace Business
             return _context.Turlar.Find(id);
         }
 
-        // Diğer iş mantığı metodları...
+        public void CreateTur(Tur tur)
+        {
+            _context.Turlar.Add(tur);
+            _context.SaveChanges();
+        }
+
+        public void UpdateTur(Tur tur)
+        {
+            _context.Turlar.Update(tur);
+            _context.SaveChanges();
+        }
+
+        public void DeleteTur(int id)
+        {
+            var tur = _context.Turlar.Find(id);
+            if (tur != null)
+            {
+                _context.Turlar.Remove(tur);
+                _context.SaveChanges();
+            }
+        }
     }
 }
+
 

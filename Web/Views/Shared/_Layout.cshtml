@@ -9,15 +9,15 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-success">
-            <!-- Burada yeşil alt çizgiyi ekledik -->
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            
             <a class="navbar-brand" href="/">
                 <img src="~/img/NT.png" alt="Nuray Turizm" class="logo" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav" style="background-color: #4CAF50;">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/">ANA SAYFA</a>
@@ -64,6 +64,10 @@
                         <a class="nav-link" href="/iletisim">İLETİŞİM</a>
                     </li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Ara</button>
+                </form>
                 <ul class="navbar-nav ml-auto">
                     @if (User.Identity.IsAuthenticated)
                     {
@@ -100,7 +104,8 @@
         </main>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" style="background-color: #4CAF50;">
+        <!-- Footer rengi yeşil -->
         <div class="container">
             &copy; 2023 - Nuray Turizm - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="color: white;">Gizlilik</a>
         </div>

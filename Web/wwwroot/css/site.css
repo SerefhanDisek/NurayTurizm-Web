@@ -1,20 +1,20 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -44,7 +44,7 @@ html, body {
 }
 
     .navbar-nav .nav-link:hover {
-        color: #FFD700 !important; /* Hover rengi */
+        color: #4CAF50 !important; /* Hover rengi */
     }
 
 .dropdown-menu {
@@ -105,7 +105,61 @@ html, body {
     color: white;
     padding: 20px 0;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
+
+.btn-secondary {
+    background-color: #4CAF50; /* Buton rengi */
+    border-color: #4CAF50;
+    color: white;
+}
+
+    .btn-secondary:hover {
+        background-color: #45a049; /* Hover rengi */
+        border-color: #45a049;
+    }
+
+.card {
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #4CAF50; /* Header arka plan rengi */
+    color: white;
+}
+
+.card-title {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-group span.text-danger {
+    color: red;
+    font-size: 0.875em;
+}
+
+.form-check-input {
+    margin-left: 0;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+    .btn-primary:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+    }

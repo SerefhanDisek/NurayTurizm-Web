@@ -73,7 +73,22 @@ html, body {
         color: white; /* Focus metin rengi */
     }
 
-/* Diðer CSS kodlarýnýz */
+/* Menü baþlýðý ayarlamalarý */
+.nav-item.dropdown .dropdown-menu .dropdown-header {
+    background-color: #4CAF50; /* Baþlýk arka plan rengi */
+    color: white !important; /* Baþlýk yazý rengi */
+}
+
+.nav-item.dropdown .dropdown-menu .dropdown-item {
+    background-color: #f8f9fa; /* Menü arka plan rengi */
+    color: #333; /* Menü yazý rengi */
+}
+
+    .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+        background-color: #4CAF50; /* Menü hover arka plan rengi */
+        color: white !important; /* Menü hover yazý rengi */
+    }
+
 .jumbotron {
     background-image: url('/img/background.jpg');
     background-size: cover;
@@ -231,20 +246,13 @@ html, body {
     margin-top: 20px;
 }
 
-.dropdown-menu {
-    background-color: #f8f9fa; /* Açýk gri arka plan rengi */
+/* Fotoðraf Sayfasý Kart Stilleri */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    border-radius: 10px; /* Rounded border */
 }
 
-.dropdown-header {
-    font-weight: bold;
-    color: #4CAF50; /* Ana renk */
-}
+    .card:hover {
+        box-shadow: 0 8
 
-.dropdown-item {
-    color: #333; /* Metin rengi */
-}
-
-    .dropdown-item:hover {
-        background-color: #4CAF50; /* Hover arka plan rengi */
-        color: white; /* Hover metin rengi */
-    }

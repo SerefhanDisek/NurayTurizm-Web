@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light ">
-            
+
             <a class="navbar-brand" href="/">
                 <img src="~/img/NT.png" alt="Nuray Turizm" class="logo" />
             </a>
@@ -59,12 +59,29 @@
                             <a class="dropdown-item" href="/Turlar/Dubai">DUBAI TURLARI</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/seyahat-ipuclari">SEYAHAT İPUÇLARI</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ipuclariDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SEYAHAT İPUÇLARI
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="ipuclariDropdown">
+                            <a class="dropdown-item" href="/Ipuclari/Kis">KIŞ SEYAHATLERİ İÇİN İPUÇLARI</a>
+                            <a class="dropdown-item" href="/Ipuclari/Karadeniz">KARADENİZ SEYAHATLERİ İÇİN İPUÇLARI</a>
+                            <a class="dropdown-item" href="/Ipuclari/Sahil">SAHİL KESİMLERİ İÇİN İPUÇLARI</a>
+                            <a class="dropdown-item" href="/Ipuclari/Yurtdisi">YURT DIŞI SEYAHATLERİ İÇİN </a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/kampanyalar">KAMPANYALAR</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="kampanyalarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            KAMPANYALAR
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="kampanyalarDropdown">
+                            <a class="dropdown-item" href="/Kampanyalar/AyinFirsatlari">AYIN FIRSATLARI</a>
+                            <a class="dropdown-item" href="/Kampanyalar/HaftaninFirsatlari">HAFTANIN FIRSATLARI</a>
+                            <a class="dropdown-item" href="/Kampanyalar/KampanyaliTurlarimiz">KAMPANYALI TURLARIMIZ</a>
+                            <a class="dropdown-item" href="/Kampanyalar/ErkenKayitFirsatlari">ERKEN KAYIT FIRSATLARI</a>
+                        </div>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/hakkimizda">HAKKIMIZDA</a>
                     </li>
@@ -125,4 +142,3 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-

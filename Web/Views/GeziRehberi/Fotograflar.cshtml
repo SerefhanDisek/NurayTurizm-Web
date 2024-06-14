@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Web.Models.Photo>
+
+@{
+    ViewData["Title"] = "Seyahatlerimizden Fotoğraflar";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Seyahatlerimizden Fotoğraflar</h1>
+    <div class="row">
+        @foreach (var photo in Model)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img class="card-img-top" src="@photo.ImageUrl" alt="@photo.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@photo.Title</h5>
+                        <p class="card-text">@photo.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

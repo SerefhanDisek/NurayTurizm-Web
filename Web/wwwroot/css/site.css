@@ -28,6 +28,7 @@ html, body {
     margin: 0; /* Varsayýlan margin'i kaldýr */
 }
 
+/* Navbar arka plan rengi ve yazý rengi */
 .navbar {
     background-color: #4CAF50; /* Ana renk */
     height: 70px; /* Navbar yüksekliði */
@@ -44,9 +45,11 @@ html, body {
 }
 
     .navbar-nav .nav-link:hover {
-        color: #4CAF50 !important; /* Hover rengi */
+        color: #FFD700 !important; /* Hover yazý rengi */
+        background-color: #3a8b3a !important; /* Hover arka plan rengi */
     }
 
+/* Dropdown menü arka plan ve yazý rengi */
 .dropdown-menu {
     background-color: #f8f9fa; /* Açýk gri arka plan rengi */
 }
@@ -65,6 +68,12 @@ html, body {
         color: white; /* Hover metin rengi */
     }
 
+    .dropdown-item:focus {
+        background-color: #4CAF50; /* Focus arka plan rengi */
+        color: white; /* Focus metin rengi */
+    }
+
+/* Diðer CSS kodlarýnýz */
 .jumbotron {
     background-image: url('/img/background.jpg');
     background-size: cover;
@@ -193,6 +202,7 @@ html, body {
 .custom-paragraph {
     color: #333; /* Paragraf metin rengi */
 }
+
 .search-form .form-control {
     margin-bottom: 10px;
 }

@@ -246,7 +246,7 @@ html, body {
     margin-top: 20px;
 }
 
-/* Fotoðraf Sayfasý Kart Stilleri */
+/* Fotoðraf ve Video Sayfasý Kart Stilleri */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
@@ -254,5 +254,34 @@ html, body {
 }
 
     .card:hover {
-        box-shadow: 0 8
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover; /* Ensure image covers the entire area */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #4CAF50; /* Main theme color */
+}
+
+.card-text {
+    color: #333; /* Text color */
+}
+
+.nav-pills .nav-link {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+    .nav-pills .nav-link.active {
+        background-color: #4CAF50;
+        color: white;
+    }

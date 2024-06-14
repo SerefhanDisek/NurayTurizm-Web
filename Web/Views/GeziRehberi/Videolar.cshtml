@@ -1,18 +1,18 @@
-﻿@model IEnumerable<Web.Models.Photo>
+﻿@model IEnumerable<Web.Models.Video>
 
 @{
-    ViewData["Title"] = "Seyahatlerimizden Fotoğraflar";
+    ViewData["Title"] = "Seyahatlerimizden Videolar";
 }
 
 <div class="container mt-5">
-    <h1 class="text-center mb-4">Seyahatlerimizden Fotoğraflar</h1>
+    <h1 class="text-center mb-4">Seyahatlerimizden Videolar</h1>
     <nav>
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" href="/GeziRehberi/Fotograflar">Fotoğraflar</a>
+                <a class="nav-link" href="/GeziRehberi/Fotograflar">Fotoğraflar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/GeziRehberi/Videolar">Videolar</a>
+                <a class="nav-link active" href="/GeziRehberi/Videolar">Videolar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/GeziRehberi/Haritalar">Haritalar</a>
@@ -23,14 +23,17 @@
         </ul>
     </nav>
     <div class="row mt-4">
-        @foreach (var photo in Model)
+        @foreach (var video in Model)
         {
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img class="card-img-top" src="@photo.ImageUrl" alt="@photo.Title">
+                    <video class="card-img-top" controls>
+                        <source src="@video.VideoUrl" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="card-body">
-                        <h5 class="card-title">@photo.Title</h5>
-                        <p class="card-text">@photo.Description</p>
+                        <h5 class="card-title">@video.Title</h5>
+                        <p class="card-text">@video.Description</p>
                     </div>
                 </div>
             </div>
@@ -38,4 +41,3 @@
         }
     </div>
 </div>
-

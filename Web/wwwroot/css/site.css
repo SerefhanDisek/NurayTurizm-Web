@@ -331,6 +331,7 @@ html, body {
         color: white;
     }
 
+
 .embed-responsive {
     position: relative;
     display: block;
@@ -352,5 +353,4 @@ html, body {
         height: 100%;
         border: 0;
     }
-
 

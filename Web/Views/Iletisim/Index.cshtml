@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "İletişim";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">İletişim</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>İletişim Bilgilerimiz</h4>
+            <p><strong>Adres:</strong> Nuray Turizm, Örnek Mahallesi, 12345 Sokak No:67, İstanbul, Türkiye</p>
+            <p><strong>Telefon:</strong> +90 555 123 4567</p>
+            <p><strong>Email:</strong> info@nurayturizm.com</p>
+            <p><strong>Çalışma Saatlerimiz:</strong> Pazartesi - Cuma: 09:00 - 18:00</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Bize Ulaşın</h4>
+            <form>
+                <div class="form-group">
+                    <label for="name">Adınız</label>
+                    <input type="text" class="form-control" id="name" placeholder="Adınızı giriniz">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email adresinizi giriniz">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Konu</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Konu">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı yazınız"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <h4>Lokasyonumuz</h4>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.555947418587!2d32.859741015678!3d39.933365279424795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34ab0a11f4c2d%3A0xc6f2781a0f6f4e68!2sAnkara!5e0!3m2!1str!2str!4v1626087395844!5m2!1str!2str" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

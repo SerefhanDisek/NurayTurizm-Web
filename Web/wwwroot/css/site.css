@@ -6,6 +6,29 @@ html {
     html {
         font-size: 16px;
     }
+
+    /* Kartlarýn geniþliðini ve içeriklerini büyüt */
+    .card {
+        width: 100%; /* Tam geniþlik kullan */
+        margin-top: 30px; /* Daha fazla boþluk */
+    }
+
+    .card-img-top {
+        height: 250px; /* Resim yüksekliðini artýr */
+        object-fit: cover; /* Resimlerin kýrpýlmadan sýðdýrýlmasý */
+    }
+
+    .card-body {
+        padding: 20px; /* Daha fazla iç padding */
+    }
+
+    .card-title {
+        font-size: 1.5rem; /* Baþlýk font boyutunu büyüt */
+    }
+
+    .jumbotron, .hero-section {
+        height: 450px; /* Jumbotron ve Hero Section yüksekliðini artýr */
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -18,13 +41,14 @@ html {
 }
 
 body {
-    padding-top: 70px; /* Navbar yüksekliði arttýðýndan padding'i de artýrýyoruz */
+    padding-top: 70px;
     font-family: 'Arial', sans-serif;
-    overflow-x: hidden; /* Yatay kaydýrmayý engelle */
+    overflow-x: hidden;
 }
+
 html, body {
-    height: 100%; /* Sayfanýn yüksekliðini tam olarak doldur */
-    margin: 0; /* Varsayýlan margin'i kaldýr */
+    height: 100%;
+    margin: 0;
 }
 
 /* Navbar arka plan rengi ve yazý rengi */
@@ -173,7 +197,6 @@ html, body {
     font-size: 0.875em;
 }
 
-
 .form-check-input {
     margin-left: 0;
 }
@@ -259,21 +282,21 @@ html, body {
 
 .card-img-top {
     border-radius: 10px 10px 0 0;
-    height: 200px;
-    object-fit: cover; /* Ensure image covers the entire area */
+    height: 250px; /* Yüksekliði artýrýldý */
+    object-fit: cover; /* Resimlerin tam olarak sýðmasý */
 }
 
 .card-body {
-    padding: 15px;
+    padding: 20px; /* Daha fazla padding */
 }
 
 .card-title {
-    font-size: 1.25rem;
-    color: #4CAF50; /* Main theme color */
+    font-size: 1.5rem; /* Baþlýk font boyutu büyütüldü */
+    color: #4CAF50; /* Ana tema rengi */
 }
 
 .card-text {
-    color: #333; /* Text color */
+    color: #333; /* Metin rengi */
 }
 
 .nav-pills .nav-link {
@@ -291,47 +314,6 @@ html, body {
     display: block;
     margin-top: 0; /* Adjust for different browsers */
 }
-
-/* Card styles */
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-    border-radius: 10px; /* Rounded border */
-}
-
-    .card:hover {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-.card-img-top {
-    border-radius: 10px 10px 0 0;
-    height: 200px;
-    object-fit: cover; /* Ensure image covers the entire area */
-}
-
-.card-body {
-    padding: 15px;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    color: #4CAF50; /* Main theme color */
-}
-
-.card-text {
-    color: #333; /* Text color */
-}
-
-.nav-pills .nav-link {
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-    .nav-pills .nav-link.active {
-        background-color: #4CAF50;
-        color: white;
-    }
-
 
 .embed-responsive {
     position: relative;
@@ -354,6 +336,3 @@ html, body {
         height: 100%;
         border: 0;
     }
-
-
-

@@ -1,35 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Web.Controllers
 {
     public class AramaController : Controller
     {
-        // Bu örnekte bir liste üzerinden arama yapıyoruz.
-        private static List<string> ornekVeri = new List<string>
+        // Örnek veri listesi ve ilgili pathler
+        private static readonly Dictionary<string, string> ornekVeri = new Dictionary<string, string>
         {
-            "Uludağ Turları",
-            "Karadeniz Turları",
-            "Pamukkale Turları",
-            "Kapadokya Turları",
-            "GAP Turları",
-            "Günübirlik Turlar",
-            "Ege-Akdeniz Turları",
-            "İstanbul Turları",
-            "Balkan Turları",
-            "Umre Organizasyonları",
-            "İtalya Turları",
-            "Ege Adaları Turları",
-            "Batum - Gürcistan Turları",
-            "Azerbaycan Turları",
-            "Dubai Turları"
+            { "Uludağ Turları", "/Turlar/Uludag" },
+            { "Karadeniz Turları", "/Turlar/Karadeniz" },
+            { "Pamukkale Turları", "/Turlar/Pamukkale" },
+            { "Kapadokya Turları", "/Turlar/Kapadokya" },
+            { "GAP Turları", "/Turlar/Gap" },
+            { "Günübirlik Turlar", "/Turlar/Gunubirlik" },
+            { "Ege-Akdeniz Turları", "/Turlar/EgeAkdeniz" },
+            { "İstanbul Turları", "/Turlar/Istanbul" },
+            { "Balkan Turları", "/Turlar/Balkan" },
+            { "Umre Organizasyonları", "/Turlar/Umre" },
+            { "İtalya Turları", "/Turlar/Italya" },
+            { "Ege Adaları Turları", "/Turlar/EgeAdalari" },
+            { "Batum - Gürcistan Turları", "/Turlar/BatumGurcistan" },
+            { "Azerbaycan Turları", "/Turlar/Azerbaycan" },
+            { "Dubai Turları", "/Turlar/Dubai" }
         };
 
         [HttpGet]
         public IActionResult Index(string q)
         {
-            var results = ornekVeri.Where(v => v.Contains(q, StringComparison.OrdinalIgnoreCase)).ToList();
+            var results = ornekVeri
+                .Where(v => v.Key.Contains(q, System.StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
             return View(results);
         }
     }

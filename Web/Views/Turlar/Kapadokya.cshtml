@@ -2,5 +2,96 @@
     ViewData["Title"] = "Kapadokya Turları";
 }
 
-<h1>Uludağ Turları</h1>
-<p>Uludağ turları hakkında detaylı bilgi buraya gelecek.</p>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Kapadokya Turları</h1>
+    <div class="row">
+        <!-- Filtreleme Alanı -->
+        <div class="col-md-3">
+            <div class="filter-sidebar p-3 bg-white shadow-sm rounded">
+                <h3 class="mb-4">Sonuçları Filtrele</h3>
+                <div class="filter-section mb-4">
+                    <h4 class="h6">Şimdi Al Sonra Öde</h4>
+                    <label class="d-block">
+                        <input type="checkbox"> Şimdi Al Sonra Öde (21)
+                    </label>
+                </div>
+                <div class="filter-section mb-4">
+                    <h4 class="h6">Hareket Noktası</h4>
+                    <input type="text" placeholder="Hareket noktası ara" class="form-control mb-2">
+                    <ul class="list-unstyled">
+                        <li><label class="d-block"><input type="checkbox"> Kent Meydanı Hareketli (3)</label></li>
+                        <li><label class="d-block"><input type="checkbox"> Acemler Hareketli (2)</label></li>
+                    </ul>
+                </div>
+                <div class="filter-section mb-4">
+                    <h4 class="h6">Bölge</h4>
+                    <input type="text" placeholder="Bölge ara" class="form-control mb-2">
+                    <ul class="list-unstyled">
+                        <li><label class="d-block"><input type="checkbox"> Nevşehir (24)</label></li>
+                        <li><label class="d-block"><input type="checkbox"> Göreme (20)</label></li>
+                        <li><label class="d-block"><input type="checkbox"> Ürgüp (18)</label></li>
+                        <li><label class="d-block"><input type="checkbox"> Avanos (18)</label></li>
+                    </ul>
+                </div>
+                <div class="filter-section mb-4">
+                    <h4 class="h6">Ulaşım Tipi</h4>
+                    <ul class="list-unstyled">
+                        <li><label class="d-block"><input type="checkbox"> Otobüs</label></li>
+                        <li><label class="d-block"><input type="checkbox"> Minibüs</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tur Listesi Alanı -->
+        <div class="col-md-9">
+            <div class="tour-list">
+                <div class="tour-item mb-4 p-3 bg-white shadow-sm rounded">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="~/img/kapadokya-tour1.jpg" alt="Kapadokya Turu" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-5">
+                            <h2 class="h5">Kapadokya Turu</h2>
+                            <p>İstanbul, Kocaeli Hareketli</p>
+                            <p>3 Gece Otel Konaklamalı</p>
+                            <p>28 Haziran - 30 Ekim 2024 arası</p>
+                            <p>4 Gece 5 Gün</p>
+                            <p>Gidiş-Dönüş: Otobüs</p>
+                            <p>Her Çarşamba, Cuma Hareketli</p>
+                        </div>
+                        <div class="col-md-3 text-center d-flex flex-column justify-content-center">
+                            <p class="mb-2">Çift Kişilik Oda, Kişi Başı:</p>
+                            <span class="price h4 mb-3">8,349 TL</span>
+                            <button class="btn btn-primary">Turu İncele</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-item mb-4 p-3 bg-white shadow-sm rounded">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="~/img/kapadokya-tour2.jpg" alt="Kapadokya Turu" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-5">
+                            <h2 class="h5">Kapadokya Turu</h2>
+                            <p>Tekirdağ, İstanbul Hareketli</p>
+                            <p>3 Gece Otel Konaklamalı</p>
+                            <p>10 Temmuz - 24 Ekim 2024 arası</p>
+                            <p>4 Gece 5 Gün</p>
+                            <p>Gidiş-Dönüş: Otobüs</p>
+                            <p>Her Çarşamba, Cuma Hareketli</p>
+                        </div>
+                        <div class="col-md-3 text-center d-flex flex-column justify-content-center">
+                            <p class="mb-2">Çift Kişilik Oda, Kişi Başı:</p>
+                            <span class="price h4 mb-3">8,999 TL</span>
+                            <button class="btn btn-primary">Turu İncele</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diğer turlar için benzer yapılar -->
+            </div>
+        </div>
+    </div>
+</div>

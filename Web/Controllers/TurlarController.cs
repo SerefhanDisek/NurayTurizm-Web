@@ -20,6 +20,11 @@ namespace Web.Controllers
             return View();
         }
 
+        public IActionResult Karadeniz1()
+        {
+            return View();
+        }
+
         public IActionResult Pamukkale()
         {
             return View();

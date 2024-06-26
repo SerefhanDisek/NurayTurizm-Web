@@ -1,9 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Business;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
 {
     public class TurlarController : Controller
     {
+        private readonly TurService _turService;
+        public TurlarController(TurService turService)
+        {
+            _turService = turService;
+        }
         public IActionResult Uludag()
         {
             return View();
@@ -87,6 +93,34 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Filter(bool? nowpaylater, string[] departure, string[] region, string[] transport)
+        {
+            var tours = _turService.GetAllTours();
+
+            if (nowpaylater.HasValue && nowpaylater.Value)
+            {
+                // Şimdi Al Sonra Öde filtresi uygulama
+                tours = tours.Where(t => t.AktifMi).ToList();
+            }
+
+            if (departure.Any())
+            {
+                tours = tours.Where(t => departure.Contains(t.Adresler.FirstOrDefault()?.İl)).ToList();
+            }
+
+            if (region.Any())
+            {
+                tours = tours.Where(t => region.Contains(t.Adresler.FirstOrDefault()?.İlçe)).ToList();
+            }
+
+            if (transport.Any())
+            {
+                tours = tours.Where(t => transport.Contains(t.GeziProgramları.FirstOrDefault()?.Vasita)).ToList();
+            }
+
+            return PartialView("_TourListPartial", tours);
         }
 
         [HttpGet]

@@ -7,27 +7,26 @@ html {
         font-size: 16px;
     }
 
-    /* Kartlarýn geniþliðini ve içeriklerini büyüt */
     .card {
-        width: 100%; /* Tam geniþlik kullan */
-        margin-top: 30px; /* Daha fazla boþluk */
+        width: 100%;
+        margin-top: 30px;
     }
 
     .card-img-top {
-        height: 250px; /* Resim yüksekliðini artýr */
-        object-fit: cover; /* Resimlerin kýrpýlmadan sýðdýrýlmasý */
+        height: 250px;
+        object-fit: cover;
     }
 
     .card-body {
-        padding: 20px; /* Daha fazla iç padding */
+        padding: 20px;
     }
 
     .card-title {
-        font-size: 1.5rem; /* Baþlýk font boyutunu büyüt */
+        font-size: 1.5rem;
     }
 
     .jumbotron, .hero-section {
-        height: 450px; /* Jumbotron ve Hero Section yüksekliðini artýr */
+        height: 450px;
     }
 }
 
@@ -51,15 +50,14 @@ html, body {
     margin: 0;
 }
 
-/* Navbar arka plan rengi ve yazý rengi */
 .navbar {
-    background-color: #4CAF50; /* Ana renk */
-    height: 70px; /* Navbar yüksekliði */
-    border-bottom: 4px solid #4CAF50; /* Alt çizgi rengi yeþil */
+    background-color: #4CAF50;
+    height: 70px;
+    border-bottom: 4px solid #4CAF50;
 }
 
 .navbar-brand img {
-    height: 100%; /* Logonun yüksekliðini navbar yüksekliðine ayarlýyoruz */
+    height: 100%;
 }
 
 .navbar-nav .nav-link {
@@ -68,48 +66,46 @@ html, body {
 }
 
     .navbar-nav .nav-link:hover {
-        color: #FFD700 !important; /* Hover yazý rengi */
-        background-color: #3a8b3a !important; /* Hover arka plan rengi */
+        color: #FFD700 !important;
+        background-color: #3a8b3a !important;
     }
 
-/* Dropdown menü arka plan ve yazý rengi */
 .dropdown-menu {
-    background-color: #f8f9fa; /* Açýk gri arka plan rengi */
+    background-color: #f8f9fa;
 }
 
 .dropdown-header {
     font-weight: bold;
-    color: #4CAF50; /* Ana renk */
+    color: #4CAF50;
 }
 
 .dropdown-item {
-    color: #333; /* Metin rengi */
+    color: #333;
 }
 
     .dropdown-item:hover {
-        background-color: #4CAF50; /* Hover arka plan rengi */
-        color: white; /* Hover metin rengi */
+        background-color: #4CAF50;
+        color: white;
     }
 
     .dropdown-item:focus {
-        background-color: #4CAF50; /* Focus arka plan rengi */
-        color: white; /* Focus metin rengi */
+        background-color: #4CAF50;
+        color: white;
     }
 
-/* Menü baþlýðý ayarlamalarý */
 .nav-item.dropdown .dropdown-menu .dropdown-header {
-    background-color: #4CAF50; /* Baþlýk arka plan rengi */
-    color: white !important; /* Baþlýk yazý rengi */
+    background-color: #4CAF50;
+    color: white !important;
 }
 
 .nav-item.dropdown .dropdown-menu .dropdown-item {
-    background-color: #f8f9fa; /* Menü arka plan rengi */
-    color: #333; /* Menü yazý rengi */
+    background-color: #f8f9fa;
+    color: #333;
 }
 
     .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
-        background-color: #4CAF50; /* Menü hover arka plan rengi */
-        color: white !important; /* Menü hover yazý rengi */
+        background-color: #4CAF50;
+        color: white !important;
     }
 
 .jumbotron {
@@ -134,13 +130,13 @@ html, body {
     }
 
 .carousel-inner {
-    max-height: 500px; /* Karusel resimlerinin yüksekliði */
+    max-height: 500px;
 }
 
     .carousel-inner img {
         width: 100%;
-        height: 500px; /* Sabit yükseklik */
-        object-fit: cover; /* Resimlerin kesilmeden ortalanmasý */
+        height: 500px;
+        object-fit: cover;
     }
 
 .container {
@@ -148,7 +144,7 @@ html, body {
 }
 
 .footer {
-    background-color: #4CAF50; /* Footer arka plan rengi */
+    background-color: #4CAF50;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -158,13 +154,13 @@ html, body {
 }
 
 .btn-secondary {
-    background-color: #4CAF50; /* Buton rengi */
+    background-color: #4CAF50;
     border-color: #4CAF50;
     color: white;
 }
 
     .btn-secondary:hover {
-        background-color: #45a049; /* Hover rengi */
+        background-color: #45a049;
         border-color: #45a049;
     }
 
@@ -173,7 +169,7 @@ html, body {
 }
 
 .card-header {
-    background-color: #4CAF50; /* Header arka plan rengi */
+    background-color: #4CAF50;
     color: white;
 }
 
@@ -211,9 +207,8 @@ html, body {
         border-color: #45a049;
     }
 
-/* Hero Section */
 .hero-section {
-    background-image: url('/img/background.jpg'); /* Arka plan fotoðrafý */
+    background-image: url('/img/background.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -225,7 +220,7 @@ html, body {
 }
 
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.8); /* Yarý þeffaf beyaz arka plan */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
 }
@@ -234,11 +229,11 @@ html, body {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #4CAF50; /* Baþlýk rengi */
+    color: #4CAF50;
 }
 
 .custom-paragraph {
-    color: #333; /* Paragraf metin rengi */
+    color: #333;
 }
 
 .search-form .form-control {
@@ -269,11 +264,10 @@ html, body {
     margin-top: 20px;
 }
 
-/* Fotoðraf ve Video Sayfasý Kart Stilleri */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
-    border-radius: 10px; /* Rounded border */
+    border-radius: 10px;
 }
 
     .card:hover {
@@ -282,21 +276,21 @@ html, body {
 
 .card-img-top {
     border-radius: 10px 10px 0 0;
-    height: 250px; /* Yüksekliði artýrýldý */
-    object-fit: cover; /* Resimlerin tam olarak sýðmasý */
+    height: 250px;
+    object-fit: cover;
 }
 
 .card-body {
-    padding: 20px; /* Daha fazla padding */
+    padding: 20px;
 }
 
 .card-title {
-    font-size: 1.5rem; /* Baþlýk font boyutu büyütüldü */
-    color: #4CAF50; /* Ana tema rengi */
+    font-size: 1.5rem;
+    color: #4CAF50;
 }
 
 .card-text {
-    color: #333; /* Metin rengi */
+    color: #333;
 }
 
 .nav-pills .nav-link {
@@ -309,10 +303,9 @@ html, body {
         color: white;
     }
 
-/* Dropdown menu styles */
 .dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 0; /* Adjust for different browsers */
+    margin-top: 0;
 }
 
 .embed-responsive {
@@ -356,7 +349,94 @@ html, body {
 }
 
     .social-icon:hover {
-        background-color: #FFD700; /* Hover rengi */
+        background-color: #FFD700;
         transform: scale(1.1);
     }
 
+.tour-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tour-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .tour-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+.tour-image {
+    width: 30%;
+    object-fit: cover;
+}
+
+.tour-details {
+    padding: 20px;
+    flex: 1;
+}
+
+    .tour-details h2 {
+        margin-top: 0;
+        color: #4CAF50;
+    }
+
+    .tour-details p {
+        color: #666;
+        margin: 5px 0;
+    }
+
+.tour-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+    .tour-price p {
+        margin: 0;
+    }
+
+.price {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.special-offer {
+    background-color: #FFEB3B;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+        transform: scale(1.05);
+    }

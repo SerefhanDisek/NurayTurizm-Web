@@ -12,3 +12,27 @@ $(document).ready(function () {
     $('input[placeholder="Giriş Tarihi"]').datepicker();
     $('input[placeholder="Çıkış Tarihi"]').datepicker();
 });
+$(document).ready(function () {
+    function fetchTours() {
+        var formData = $('#filter-form').serialize();
+        $.ajax({
+            url: '/Turlar/Filter',
+            type: 'GET',
+            data: formData,
+            success: function (data) {
+                $('#tour-list').html(data);
+            },
+            error: function () {
+                alert('Turlar yüklenirken bir hata oluştu.');
+            }
+        });
+    }
+
+    // Filtreler değiştiğinde turları yeniden yükle
+    $('#filter-form input').on('change', function () {
+        fetchTours();
+    });
+
+    // Sayfa yüklendiğinde turları yükle
+    fetchTours();
+});

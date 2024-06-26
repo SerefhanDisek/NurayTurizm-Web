@@ -1,7 +1,6 @@
 ﻿using DataAccess;
 using DataAccess.Models;
-using System.Collections.Generic;
-using System.Linq;
+
 
 namespace Business
 {
@@ -44,6 +43,44 @@ namespace Business
                 _context.Turlar.Remove(tur);
                 _context.SaveChanges();
             }
+        }
+
+        private List<Tur> _tours = new List<Tur>
+        {
+            new Tur {
+                ID = 1,
+                Ad = "Karadeniz Yaylalar Turu",
+                Açıklama = "İstanbul, Kocaeli Hareketli",
+                AktifMi = true,
+                ÜyeOluşTarihi = DateTime.Now,
+                YurtİçiMi = true,
+                YurtDışıMı = false,
+                GeziProgramları = null,
+                Adresler = null,
+                TuraKayitlar = null,
+                Rezervasyonlar = null,
+                Yorumlar = null
+            },
+            new Tur {
+                ID = 2,
+                Ad = "Ege Akdeniz Turu",
+                Açıklama = "Ankara Hareketli",
+                AktifMi = true,
+                ÜyeOluşTarihi = DateTime.Now,
+                YurtİçiMi = true,
+                YurtDışıMı = false,
+                GeziProgramları = null,
+                Adresler = null,
+                TuraKayitlar = null,
+                Rezervasyonlar = null,
+                Yorumlar = null
+            }
+            // Diğer tur verileri...
+        };
+
+        public List<Tur> GetAllTours()
+        {
+            return _tours;
         }
     }
 }

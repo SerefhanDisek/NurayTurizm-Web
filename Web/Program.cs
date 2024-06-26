@@ -38,9 +38,18 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    // Arama route'u
+    endpoints.MapControllerRoute(
+        name: "arama",
+        pattern: "Turlar/Arama",
+        defaults: new { controller = "Turlar", action = "Arama" });
+});
 
 app.Run();
 

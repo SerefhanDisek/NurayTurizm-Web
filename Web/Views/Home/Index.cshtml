@@ -11,35 +11,31 @@
 <div class="hero-section">
     <div class="hero-content">
         <h1 class="custom-heading">Hayalindeki tatili Nuray Turizm ile planla!</h1>
-        <form action="/Search/Results" method="get" class="search-form">
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <input type="text" name="destination" class="form-control" placeholder="Nereye gitmek istersin?" />
+        <form class="search-form" action="/Turlar/Arama" method="get">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" name="destination" placeholder="Nereye gitmek istersin?" required>
                 </div>
-                <div class="form-group col-md-2">
-                    <input type="text" name="checkin" class="form-control" placeholder="Giriş Tarihi" />
+                <div class="col-md-2">
+                    <input type="date" class="form-control" name="startDate" placeholder="Giriş Tarihi">
                 </div>
-                <div class="form-group col-md-2">
-                    <input type="text" name="checkout" class="form-control" placeholder="Çıkış Tarihi" />
+                <div class="col-md-2">
+                    <input type="date" class="form-control" name="endDate" placeholder="Çıkış Tarihi">
                 </div>
-                <div class="form-group col-md-2">
-                    <select name="guests" class="form-control">
-                        <option value="2">2 Misafir</option>
-                        <option value="1">1 Misafir</option>
-                        <option value="3">3 Misafir</option>
-                        <option value="4">4 Misafir</option>
-                    </select>
+                <div class="col-md-2">
+                    <input type="number" class="form-control" name="guests" placeholder="2 Misafir" min="1" required>
                 </div>
-                <div class="form-group col-md-2">
-                    <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Ara</button>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success">Ara</button>
                 </div>
             </div>
         </form>
-        <div class="popular-searches">
-            <p class="custom-paragraph">Popüler Aramalar: <a href="/Search/Results?query=Yaz Fırsatları">Yaz Fırsatları</a> | <a href="/Search/Results?query=Son Dakika Tatil Fırsatlı Oteller">Son Dakika Tatil Fırsatlı Oteller</a> | <a href="/Search/Results?query=Kıbrıs Otelleri">Kıbrıs Otelleri</a> | <a href="/Search/Results?query=Kurban Bayramı Otelleri">Kurban Bayramı Otelleri</a></p>
-        </div>
+        <p class="popular-searches">
+            Popüler Aramalar: <a href="#">Yaz Fırsatları</a> | <a href="#">Son Dakika Tatil Fırsatları</a> | <a href="#">Kıbrıs Otelleri</a> | <a href="#">Kurban Bayramı Otelleri</a>
+        </p>
     </div>
 </div>
+
 
 
 <div class="container mt-4">

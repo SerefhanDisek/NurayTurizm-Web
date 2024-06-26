@@ -11,35 +11,36 @@
 <div class="hero-section">
     <div class="hero-content">
         <h1 class="custom-heading">Hayalindeki tatili Nuray Turizm ile planla!</h1>
-        <div class="search-form">
+        <form action="/Search/Results" method="get" class="search-form">
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" placeholder="Nereye gitmek istersin?" />
+                    <input type="text" name="destination" class="form-control" placeholder="Nereye gitmek istersin?" />
                 </div>
                 <div class="form-group col-md-2">
-                    <input type="text" class="form-control" placeholder="Giriş Tarihi" />
+                    <input type="text" name="checkin" class="form-control" placeholder="Giriş Tarihi" />
                 </div>
                 <div class="form-group col-md-2">
-                    <input type="text" class="form-control" placeholder="Çıkış Tarihi" />
+                    <input type="text" name="checkout" class="form-control" placeholder="Çıkış Tarihi" />
                 </div>
                 <div class="form-group col-md-2">
-                    <select class="form-control">
-                        <option>2 Misafir</option>
-                        <option>1 Misafir</option>
-                        <option>3 Misafir</option>
-                        <option>4 Misafir</option>
+                    <select name="guests" class="form-control">
+                        <option value="2">2 Misafir</option>
+                        <option value="1">1 Misafir</option>
+                        <option value="3">3 Misafir</option>
+                        <option value="4">4 Misafir</option>
                     </select>
                 </div>
                 <div class="form-group col-md-2">
                     <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Ara</button>
                 </div>
             </div>
-        </div>
+        </form>
         <div class="popular-searches">
-            <p class="custom-paragraph">Popüler Aramalar: <a href="#">Yaz Fırsatları</a> | <a href="#">Son Dakika Tatil Fırsatlı Oteller</a> | <a href="#">Kıbrıs Otelleri</a> | <a href="#">Kurban Bayramı Otelleri</a></p>
+            <p class="custom-paragraph">Popüler Aramalar: <a href="/Search/Results?query=Yaz Fırsatları">Yaz Fırsatları</a> | <a href="/Search/Results?query=Son Dakika Tatil Fırsatlı Oteller">Son Dakika Tatil Fırsatlı Oteller</a> | <a href="/Search/Results?query=Kıbrıs Otelleri">Kıbrıs Otelleri</a> | <a href="/Search/Results?query=Kurban Bayramı Otelleri">Kurban Bayramı Otelleri</a></p>
         </div>
     </div>
 </div>
+
 
 <div class="container mt-4">
     <div id="tourCarousel" class="carousel slide" data-ride="carousel">
@@ -88,4 +89,96 @@
             <p><a class="btn btn-secondary" href="/seyahat-ipuclari">İpuçları &raquo;</a></p>
         </div>
     </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Müşteri Yorumları</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">Harika bir deneyimdi! Nuray Turizm ile seyahat etmekten çok memnun kaldım.</p>
+                        <footer class="blockquote-footer">Ayşe Yılmaz</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">Her şey mükemmeldi! Tatilimiz unutulmaz oldu.</p>
+                        <footer class="blockquote-footer">Mehmet Demir</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">Ekip çok profesyonel ve ilgiliydi. Çok teşekkürler!</p>
+                        <footer class="blockquote-footer">Zeynep Kaya</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Son Blog Yazıları</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/blog1.jpg" class="card-img-top" alt="Blog">
+                <div class="card-body">
+                    <h5 class="card-title">Kış Tatili İçin Öneriler</h5>
+                    <p class="card-text">Kış tatilinde dikkat edilmesi gerekenler...</p>
+                    <a href="/Blog/KisTatili" class="btn btn-primary">Devamını Oku</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/blog2.jpg" class="card-img-top" alt="Blog">
+                <div class="card-body">
+                    <h5 class="card-title">Yaz Tatili Planlama Rehberi</h5>
+                    <p class="card-text">Yaz tatilinizi planlarken dikkat etmeniz gerekenler...</p>
+                    <a href="/Blog/YazTatili" class="btn btn-primary">Devamını Oku</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/blog3.jpg" class="card-img-top" alt="Blog">
+                <div class="card-body">
+                    <h5 class="card-title">En İyi Seyahat İpuçları</h5>
+                    <p class="card-text">Seyahat ederken işinize yarayacak ipuçları...</p>
+                    <a href="/Blog/SeyahatIpuclari" class="btn btn-primary">Devamını Oku</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Bize Ulaşın</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Adınız</label>
+            <input type="text" class="form-control" id="name" placeholder="Adınız">
+        </div>
+        <div class="form-group">
+            <label for="email">E-posta</label>
+            <input type="email" class="form-control" id="email" placeholder="E-posta">
+        </div>
+        <div class="form-group">
+            <label for="message">Mesajınız</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Mesajınız"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
+</div>
 </div>

@@ -1,4 +1,5 @@
 ﻿using Business;
+using DataAccess;
 using DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,7 +8,7 @@ namespace Web.Controllers
     public class TurController : Controller
     {
         private readonly TurService _turService;
-
+        private readonly TurContext _turContext;
         public TurController(TurService turService)
         {
             _turService = turService;

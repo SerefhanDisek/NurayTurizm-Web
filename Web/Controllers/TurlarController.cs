@@ -90,10 +90,21 @@ namespace Web.Controllers
             return View();
         }
 
+        public IActionResult VizesizTurlar() 
+        {
+            return View();
+        }
+
+        public IActionResult KurbanBayramiOrganizasyonlari()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
         }
+
 
         public IActionResult Filter(bool? nowpaylater, string[] departure, string[] region, string[] transport)
         {
